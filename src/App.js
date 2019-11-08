@@ -1,15 +1,16 @@
 import React, {Component} from 'react';
 import './App.css';
 import Circle from './components/circle';
+import showNumber from './components/showNumber';
 
 class App extends Component {
   state = {
     numbers: [
-      {number: 1},
-      {number: 2},
-      {number: 3},
-      {number: 4},
-      {number: 5}
+      {number: showNumber[0]},
+      {number: showNumber[1]},
+      {number: showNumber[2]},
+      {number: showNumber[3]},
+      {number: showNumber[4]}
     ]
   };
   
