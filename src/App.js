@@ -27,6 +27,18 @@ class App extends Component {
     });
     return result;
   }
+
+  changeNumbers = () => {
+    const result = this.generateNumbers();
+    const numbers = [...this.state.numbers];
+    numbers[0].number = result[0];
+    numbers[1].number = result[1];
+    numbers[2].number = result[2];
+    numbers[3].number = result[3];
+    numbers[4].number = result[4];
+    this.setState({numbers});
+    
+  };
   
   render() {
     return (
