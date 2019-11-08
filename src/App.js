@@ -17,6 +17,9 @@ class App extends Component {
     return (
       <div className="App">
         <div>
+          <button className='btn' onClick={this.changeNumbers}>New Numbers</button>
+        </div>
+        <div>
           <Circle number={this.state.numbers[0].number}/>
           <Circle number={this.state.numbers[1].number}/>
           <Circle number={this.state.numbers[2].number}/>
