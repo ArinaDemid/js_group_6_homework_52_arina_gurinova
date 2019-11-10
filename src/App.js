@@ -12,7 +12,7 @@ class App extends Component {
         numbers.push(item);
       };
     }
-    let result = numbers.sort(function(a, b) {
+    let result = numbers.sort((a, b) => {
       return a - b;
     });
     return result;
