@@ -1,18 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
 import Circle from './components/circle';
-import showNumber from './components/showNumber';
 
 class App extends Component {
-  state = {
-    numbers: [
-      {number: showNumber[0]},
-      {number: showNumber[1]},
-      {number: showNumber[2]},
-      {number: showNumber[3]},
-      {number: showNumber[4]}
-    ]
-  };
 
   generateNumbers = () => {
     let numbers = [];
@@ -26,7 +16,17 @@ class App extends Component {
       return a - b;
     });
     return result;
-  }
+  };
+
+  state = {
+    numbers: [
+      {number: this.generateNumbers()[0]},
+      {number: this.generateNumbers()[1]},
+      {number: this.generateNumbers()[2]},
+      {number: this.generateNumbers()[3]},
+      {number: this.generateNumbers()[4]}
+    ]
+  };
 
   changeNumbers = () => {
     const result = this.generateNumbers();
@@ -37,7 +37,6 @@ class App extends Component {
     numbers[3].number = result[3];
     numbers[4].number = result[4];
     this.setState({numbers});
-    
   };
   
   render() {
