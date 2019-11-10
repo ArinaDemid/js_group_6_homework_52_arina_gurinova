@@ -17,14 +17,16 @@ class App extends Component {
     });
     return result;
   };
+  
+  generateNum= this.generateNumbers();
 
   state = {
     numbers: [
-      {number: this.generateNumbers()[0]},
-      {number: this.generateNumbers()[1]},
-      {number: this.generateNumbers()[2]},
-      {number: this.generateNumbers()[3]},
-      {number: this.generateNumbers()[4]}
+      {number: this.generateNum[0]},
+      {number: this.generateNum[1]},
+      {number: this.generateNum[2]},
+      {number: this.generateNum[3]},
+      {number: this.generateNum[4]}
     ]
   };
 
